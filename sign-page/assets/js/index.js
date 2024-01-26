@@ -45,10 +45,10 @@ if (checkLog == null) {
 
 function checkLogIn() {
     const checkVal = getLocalStorage("GLOBAL_LOG_DATA");
-    if (checkVal.token != "") {
+    if (checkVal.token != "" && checkVal != null) {
         window.location.href = '/overview';
     } else {
-        let globalLogData = {
+        const globalLogData = {
             name: "",
             role: "",
             passed: false,  

@@ -20,26 +20,30 @@ export function popupAlert(title, content){
     document.getElementById('container').appendChild(popUp);
 }
 
-export function verifyUserAccount() {
+export async function verifyUserAccount() {
     const globalLogData = getLocalStorage("GLOBAL_LOG_DATA");
     if (globalLogData != null && globalLogData.token != "") {
-        fetch(`${API_DOMAIN}/api/v1/auth/me`, {
-            method: "GET",
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${globalLogData.token}`
+        try {
+            const response = await fetch(`${API_DOMAIN}/api/v1/auth/me`, {
+                method: "GET",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${globalLogData.token}`
+                }
+            });
+            const user = await response.json();
+            if (user.error_code === 0) {
+                return user.data.role;
+            } else {
+                return 0;
             }
-        })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);  
-            if (data.error_code == 1) return 1; else return 0;
-        })
-        .catch(err => {
-            return err;
-        })  
-    } else return 0;
-
+        } catch (err) {
+            console.log(err);
+            return 0;
+        }
+    } else {
+        return 0;
+    }
 }
 
 export async function fetchAPI(data, type, method, header) {
