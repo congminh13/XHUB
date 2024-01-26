@@ -1,4 +1,5 @@
 import { API_DOMAIN } from "../../../config/api.js";
+import { getLocalStorage} from "../../../assets/js/tools.js";
 
 let checkLog = getLocalStorage("GLOBAL_LOG_DATA");
 if (checkLog == null) {
@@ -11,11 +12,6 @@ function checkLogIn() {
     if (checkVal == null || checkVal.token == "") {
         window.location.href = '/';
     }
-}
-
-function getLocalStorage(address){
-    let data = JSON.parse(localStorage.getItem(address)); 
-    return data;
 }
 
 checkLogIn();
@@ -47,4 +43,4 @@ function fetchDetailApi() {
         })
 }
 
-fetchDetailApi();
+fetchDetailApi();   

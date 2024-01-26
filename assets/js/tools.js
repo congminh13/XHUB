@@ -37,7 +37,7 @@ export function verifyUserAccount() {
         })
         .catch(err => {
             return err;
-        })
+        })  
     } else return 0;
 
 }
