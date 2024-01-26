@@ -20,11 +20,11 @@
 //         console.log(data);
 //     })
 
-import { renderLeftSide } from './left-side.js';
+import { renderOverview } from './overview-render.js';
 
 const renderIndex = (container) => {
     let bodyContainer = document.getElementById("body-container");
-    const leftSide = renderLeftSide();
+    const leftSide = renderOverview();
     bodyContainer.appendChild(leftSide);
 };
 
