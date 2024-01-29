@@ -11,11 +11,12 @@ async function checkAuth() {
                 token: ""
             }
             setLocalStorage(globalLogData, "GLOBAL_LOG_DATA");
-            window.location.href = '/';
+            console.log(1);
+            // window.location.href = '/';
         }
-        else window.location.href = `/${role}`;
+        // else window.location.href = `/${role}`;
     } catch (error) {
-        window.location.href = '/';
+        // window.location.href = '/';
     }
 }
 

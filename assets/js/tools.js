@@ -38,7 +38,7 @@ export async function verifyUserAccount() {
                 return 0;
             }
         } catch (err) {
-            console.log(err);
+            // console.log(err);
             return 0;
         }
     } else {
