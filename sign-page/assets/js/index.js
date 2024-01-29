@@ -58,9 +58,6 @@ function checkLogIn() {
     }
 }
 
-checkLogIn();
-
-
 function handleButtonEvent(event) {
     event.preventDefault();
     if (event.target.id === 'register') {
@@ -130,7 +127,7 @@ function registrationEvent(event) {
         logData.registration.password = regInput.password;
         logData.registration.role = regInput.role;
         logData.registration.name = regInput.name;
-        console.log(logData.registration);
+        // console.log(logData.registration);
         fetchRegisterApi(logData);
         document.getElementById('pass-allowed').textContent = 'Đã đăng ký thành công.';
         globalLogData.name = document.getElementById('full-name').value;
@@ -140,7 +137,7 @@ function registrationEvent(event) {
         event.preventDefault();
     }
 
-    console.log(JSON.stringify(logData.registration));
+    // console.log(JSON.stringify(logData.registration));
 }
 
 async function fetchRegisterApi(logData) {
@@ -170,14 +167,14 @@ function loginEvent(event) {
     logData.login.email = document.getElementById('log-mail').value;
     logData.login.password = document.getElementById('log-pass').value;
     logData.login.role = data.role; 
-    console.log(JSON.stringify(logData.login));
+    // console.log(JSON.stringify(logData.login));
     fetchLoginApi(logData.login);
 }
 
 
 async function fetchLoginApi(data) {
     let da = await fetchAPI(data, "login", "POST", null);
-    console.log(da);
+    // console.log(da);
     if (da.error_code == 0) {
         globalLogData.token = da.data.token;
         globalLogData.name = da.data.name

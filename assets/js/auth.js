@@ -1,4 +1,5 @@
 import { verifyUserAccount } from '../../assets/js/tools.js';
+import { getLocalStorage } from '../../assets/js/tools.js';
 
 async function checkAuth() {
     try {
@@ -12,11 +13,14 @@ async function checkAuth() {
             }
             setLocalStorage(globalLogData, "GLOBAL_LOG_DATA");
             console.log(1);
-            // window.location.href = '/';
+            window.location.href = '/';
+        } else {
+            const roleF = getLocalStorage("GLOBAL_LOG_DATA");
+            if (roleF.role != role) window.location.href = '/';
         }
-        // else window.location.href = `/${role}`;
+        console.log(role);
     } catch (error) {
-        // window.location.href = '/';
+        window.location.href = '/';
     }
 }
 
