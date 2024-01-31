@@ -82,7 +82,6 @@ export const renderOverview = () => {
         leftSideItem.appendChild(objectDiv);
         leftSide.appendChild(leftSideItem);
     }
-
     return leftSide;
 }
 
