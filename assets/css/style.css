@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Mulish");
+
 :root {
     --more--light--grey: #EBECF2;
     --pink--white: #ffc3d4;
@@ -11,7 +13,8 @@
 * {
     margin: 0px;
     padding: 0px; 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   */
+    font-family: 'Mulish';
 }
 
 html {
