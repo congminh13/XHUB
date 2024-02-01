@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Ysabeau+Office:wght@1;100&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Mulish");
 
 * {
   padding: 0;
@@ -6,7 +6,8 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   scroll-padding-top: 2rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: Mulish;
 }
 
 /* Color Variable */
