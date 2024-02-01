@@ -5,16 +5,15 @@ const renderIndex = (container) => {
     const leftSide = renderOverview();
     bodyContainer.appendChild(leftSide);
 };
-
 let container = document.getElementById("container");
 renderIndex(container);
 
 import { centerContent } from './overview-render.js';
 
 const renderCenterContent = () => {
-    let centerContainer = document.getElementById("center-content");
+    // let centerContainer = document.getElementById("center-content");
     const centerElements = centerContent();
-    centerElements.appendChild(centerContainer);
+    // centerElements.appendChild(centerContainer);
 };
 renderCenterContent();
 
