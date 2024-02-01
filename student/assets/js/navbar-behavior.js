@@ -39,41 +39,14 @@ document.addEventListener("DOMContentLoaded", function () {
     noti_dialog.classList.add("noti-hidden");
   });
 });
-  
 
-const desiredLeftPosition = -300;
-const desiredNotiLeftPosition = -350;
-const desiredTopPosition = 40;
-const profileDivRect = profile.getBoundingClientRect();
-const notiDivRect = noti.getBoundingClientRect();
+// Fixed noti and profile box
+setTimeout(function() {
+  document.getElementById('profileBox').style.right = 50 + 'px';
+  document.getElementById('profileBox').style.top = 50 + 'px';
+  document.getElementById('notiBox').style.right = 100 + 'px';
+  document.getElementById('notiBox').style.top = 60 + 'px';
+}, 1000);
 
-
-function updateProfileBoxPosition() {
-  var profile = document.getElementById('profile');
-  var profileBox = document.getElementById('profileBox');
-
-
-  // Set the position of subDiv based on mainDiv's position
-  profileBox.style.left = profileDivRect.left + desiredLeftPosition + 'px';
-  profileBox.style.top = profileDivRect.top + desiredTopPosition + 'px';
-}
-updateProfileBoxPosition();
-
-
-function updateNotiBoxPostition () {
-  var noti = document.getElementById('noti');
-  var notiBox = document.getElementById('notiBox');
-
-  notiBox.style.left = notiDivRect.left + desiredNotiLeftPosition + 'px';
-  notiBox.style.top = notiDivRect.top + desiredTopPosition + 'px';
-}
-
-updateNotiBoxPostition();
-
-
-window.addEventListener('resize', function() {
-  updateProfileBoxPosition();
-  updateNotiBoxPostition();
-});
 
 

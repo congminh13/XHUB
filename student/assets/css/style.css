@@ -181,8 +181,8 @@ height: 100%;
 }
 
 .noti-dialog {
-  top: 54px;
-  left: 74%;
+  /* top: 54px;
+  left: 74%; */
   background-color: rgb(255, 255, 255);
   color: rgb(32, 34, 39);
   border-radius: 4px;
@@ -213,7 +213,7 @@ height: 100%;
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px -3px,
     rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px;
-  position: absolute;
+  position: fixed;
   overflow: hidden auto;
   width: 100%;
   max-width: 370px;
@@ -462,7 +462,6 @@ height: 100%;
 
 /* Center content */
 .center-content {
-  /* margin: 0 auto; */
   justify-content: center;
   padding-bottom: 24px;
   background: #f0f2f5;
@@ -471,7 +470,6 @@ height: 100%;
   left: 18%;
   position: absolute;
   width: calc(100vw - 365px);
-  /* width: 100%; */
   top: 64px;
   border-radius: 10px;
   z-index: 11111;

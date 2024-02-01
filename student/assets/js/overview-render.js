@@ -173,6 +173,7 @@ export const centerContent = () => {
 
         const bodyContainer = document.getElementById("body-container");
         const classroom = document.createElement("div");
+        
         classroom.classList.add("classroom");
         classroom.setAttribute("id", centerIDs[i] || "")
         classroom.appendChild(title);
