@@ -52,6 +52,7 @@ body {
 }
 
 .page-logo {
+  z-index: 999;
   margin-left: 2rem;
   width: 90px;
   height: 72px;

@@ -35,7 +35,7 @@ let globalLogData = {
     role: "",
     passed: false,  
     token: "",
-    lang: "vie"
+    lang: "vi"
 }
 
 let checkLog = getLocalStorage("GLOBAL_LOG_DATA");
@@ -57,6 +57,8 @@ function checkLogIn() {
         setLocalStorage(globalLogData, "GLOBAL_LOG_DATA");
     }
 }
+
+checkLogIn();
 
 function handleButtonEvent(event) {
     event.preventDefault();
