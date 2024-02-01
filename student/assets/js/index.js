@@ -1,3 +1,4 @@
+// Overview content render
 import { renderOverview } from './overview-render.js';
 
 const renderIndex = (container) => {
@@ -8,6 +9,7 @@ const renderIndex = (container) => {
 let container = document.getElementById("container");
 renderIndex(container);
 
+// Center content render
 import { centerContent } from './overview-render.js';
 
 const renderCenterContent = () => {
