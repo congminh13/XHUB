@@ -9,8 +9,6 @@ const renderIndex = (container) => {
 let container = document.getElementById("container");
 renderIndex(container);
 
-
-
 import { centerContent } from './overview-render.js';
 
 const renderCenterContent = () => {
@@ -23,6 +21,8 @@ renderCenterContent();
 const checkout = document.getElementById("logout-button");
 
 checkout.addEventListener("click", (event) => {
-    localStorage.removeItem("GLOBAL_LOG_DATA");
+    // localStorage.removeItem("GLOBAL_LOG_DATA");
+    event.preventDefault();
+    console.log(0);
  });
  
