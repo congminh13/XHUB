@@ -41,9 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
   
 
-
-
-
 const desiredLeftPosition = -300;
 const desiredNotiLeftPosition = -350;
 const desiredTopPosition = 40;

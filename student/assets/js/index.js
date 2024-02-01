@@ -20,8 +20,5 @@ renderCenterContent();
 const checkout = document.getElementById("logout-button");
 
 checkout.addEventListener("click", (event) => {
-    // localStorage.removeItem("GLOBAL_LOG_DATA");
-    event.preventDefault();
-    console.log(0);
- });
- 
+   localStorage.removeItem("GLOBAL_LOG_DATA");
+});
