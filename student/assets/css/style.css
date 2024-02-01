@@ -38,7 +38,7 @@ body {
 /* Navbar */
 /* Header */
 .header {
-  height: 63px;
+  height: 2px;
   background: #fff;
   display: flex;
   max-height: 63px;
@@ -52,7 +52,6 @@ body {
 }
 
 .page-logo {
-  z-index: 999;
   margin-left: 2rem;
   width: 90px;
   height: 72px;
@@ -61,12 +60,11 @@ body {
 /* Smoother navbar */
 .border-slider {
   margin: 0 auto;
-  max-width: 90px;
-  /* width: 100px; */
+  min-width: 86px;
   position: absolute;
   bottom: 0;
-  top: 60.5px;
-  left: 5px;
+  top: 40px;
+  left: 0;
   height: 2.5px;
   background-color: var(--slider-color);
   transition: transform 0.3s ease;
@@ -76,17 +74,17 @@ body {
   font-weight: 600;
 }
 
+.cc {
+  max-width: 90px;
+  width: 100%;
+}
+
 .nal-item {
   text-decoration: none;
   color: var(--text-color);
   font-weight: 400;
   font-size: 15px;
-  width: 100px; 
-  height: 100%;
-  margin: 0 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 0 16px;
 }
 
 /* Right content */
@@ -96,12 +94,9 @@ body {
 }
 
 .center-navbar-section {
-height: 100%;
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-  display: flex;
-
 }
 
 .help-question,

@@ -82,7 +82,103 @@ export const renderOverview = () => {
         leftSideItem.appendChild(objectDiv);
         leftSide.appendChild(leftSideItem);
     }
+
     return leftSide;
 }
 
 
+const centerContentData = [
+    {
+        title: {
+            "vi": "Phòng học hôm nay",
+            "eng": "Today's classes",
+        },
+        roomImg: "https://shub.edu.vn/images/overview-schedule.svg",
+        titleSub: {
+            "vi": "Không có buổi học nào diễn ra hôm nay",
+            "en": "There are no classes taking place today",
+        },
+    },
+    {
+        title: {
+            "vi": "Bài tập chưa nộp",
+            "eng": "Unsubmitted assignments",
+        },
+        roomImg: "https://shub.edu.vn/images/overview-homework.svg",
+        titleSub: {
+            "vi": "Thật tuyệt vời! Tất cả bài tập đã được hoàn thành",
+            "en": "It's awesome! All assignments have been completed",
+        },
+    },
+    {
+        title: {
+            "vi": "Tài liệu chưa đọc",
+            "eng": "Unread material",
+        },
+        roomImg: "https://shub.edu.vn/images/overview-file.svg",
+        titleSub: {
+            "vi": "Bạn đã đọc hết tất cả tài liệu",
+            "en": "You've read all the documents",
+        },
+    },
+    {
+        title: {
+            "vi": "Bài giảng chưa xem",
+            "eng": "Unwatched sermons",
+        },
+        roomImg: "https://shub.edu.vn/images/overview-lesson.svg",
+        titleSub: {
+            "vi": "Bạn đã xem hết tất cả bài giảng",
+            "en": "You've watched all the lectures",
+        },
+    },
+    {
+        title: {
+            "vi": "Thành tích học tập",
+            "eng": "Achievments",
+        },
+        roomImg: "https://shub.edu.vn/images/overview-achievement.svg",
+        titleSub: {
+            "vi": "Bạn chưa có kết quả nào để hiển thị",
+            "en": "You don't have any results to show yet",
+        },
+    },
+]
+
+export const centerContent = () => {
+    let centerElements = document.createElement("div");
+    centerElements.setAttribute("id", "center-content");
+    centerElements.classList.add("center-content");
+
+
+    for (let i of centerContentData) {
+
+        const title = document.createElement("h6");
+        title.classList.add("title");
+        title.innerHTML = i.title[global_lang];
+
+        const render = document.createElement("div");
+        render.classList.add("render");
+
+        const classImg = document.createElement("img");
+        classImg.classList.add("img");
+        classImg.setAttribute('src', i.roomImg);
+        render.appendChild(classImg);
+
+        const sub = document.createElement("p");
+        sub.innerHTML = i.titleSub[global_lang];
+        sub.classList.add("sub");
+
+        render.appendChild(sub);
+
+        const bodyContainer = document.getElementById("body-container");
+        const classroom = document.createElement("div");
+        classroom.classList.add("classroom");
+        classroom.appendChild(title);
+        classroom.appendChild(render);
+        centerElements.appendChild(classroom);
+        bodyContainer.appendChild(centerElements);
+    }
+
+    return centerElements;
+}
