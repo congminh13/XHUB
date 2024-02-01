@@ -146,39 +146,39 @@ const centerContentData = [
 ]
 
 export const centerContent = () => {
+    const centerIDs = ['today', 'ex', 'doc', 'video', 'achievement'];
+
     let centerElements = document.createElement("div");
     centerElements.setAttribute("id", "center-content");
     centerElements.classList.add("center-content");
 
-
-    for (let i of centerContentData) {
-
+    for (let i = 0; i < centerContentData.length; i++) {
+    
         const title = document.createElement("h6");
         title.classList.add("title");
-        title.innerHTML = i.title[global_lang];
+        title.innerHTML = centerContentData[i].title[global_lang];
 
         const render = document.createElement("div");
         render.classList.add("render");
 
         const classImg = document.createElement("img");
         classImg.classList.add("img");
-        classImg.setAttribute('src', i.roomImg);
+        classImg.setAttribute('src', centerContentData[i].roomImg);
         render.appendChild(classImg);
 
         const sub = document.createElement("p");
-        sub.innerHTML = i.titleSub[global_lang];
+        sub.innerHTML = centerContentData[i].titleSub[global_lang];
         sub.classList.add("sub");
-
         render.appendChild(sub);
 
         const bodyContainer = document.getElementById("body-container");
         const classroom = document.createElement("div");
         classroom.classList.add("classroom");
+        classroom.setAttribute("id", centerIDs[i] || "")
         classroom.appendChild(title);
         classroom.appendChild(render);
         centerElements.appendChild(classroom);
         bodyContainer.appendChild(centerElements);
-    }
-
+    }   
     return centerElements;
 }
