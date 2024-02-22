@@ -6,6 +6,7 @@ const renderIndex = (container) => {
     const leftSide = renderOverview();
     bodyContainer.appendChild(leftSide);
 };
+
 let container = document.getElementById("container");
 renderIndex(container);
 

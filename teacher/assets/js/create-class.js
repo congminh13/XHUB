@@ -18,7 +18,7 @@ export async function createClass(name) {
     })
         .then(res => res.json())
         .then(data => {
-            popupAlert("", "OK r");
+            // popupAlert("", "OK r");
         })
         .catch(err => {
             console.log(err);

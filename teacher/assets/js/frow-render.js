@@ -10,9 +10,9 @@ export function renderFRow() {
     // Create class-count div
     const classCountDiv = document.createElement("div");
     classCountDiv.className = "class-count hover";
-    classCountDiv.textContent = "lop cua ban 12";
+    classCountDiv.textContent = "lop cua ban";
     classCountDiv.style.cssText = "height:50px;width:8%;background-color:#ec4545;border-radius:10px;color:white;display:flex;align-items:center;justify-content:center;font-size:15.5px;";
-
+    
     // Create search-box input
     const searchBoxInput = document.createElement("input");
     searchBoxInput.type = "text";

@@ -84,3 +84,16 @@ export function checkLogValidation(code) {
     if (code == 20005) return "Không tìm thấy lớp."; else 
     if (code == 20006) return "Bạn không phải là học sinh";
 }
+
+export function deleteUWBehave() {
+    let uwbehaveObj = document.getElementById("uwbehave");
+    uwbehaveObj.remove();
+
+    let newUWBehave = document.createElement("div");
+    newUWBehave.setAttribute("id", "uwbehave");
+
+    let uwcontainer = document.getElementById("uwcontainer");
+
+    uwcontainer.appendChild(newUWBehave);
+}
+
