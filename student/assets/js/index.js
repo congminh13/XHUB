@@ -12,13 +12,13 @@ renderIndex(container);
 
 // Center content render
 import { centerContent } from './overview-render.js';
-
 const renderCenterContent = () => {
-    // let centerContainer = document.getElementById("center-content");
     const centerElements = centerContent();
-    // centerElements.appendChild(centerContainer);
 };
 renderCenterContent();
+
+import { renderFRow } from "./class-render.js";
+
 
 const checkout = document.getElementById("logout-button");
 
