@@ -2,12 +2,16 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MindX Hub</title>
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-  <link rel="shortcut icon" href="../assets/img/logo.jpg" type="image/x-icon" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindX Hub</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/img/logo.jpg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <div id="container" class="container">
@@ -139,17 +143,65 @@
                 <div id="class-detail">
                     <div class="side-bar">
                         <div class="f-content">
-                            <div class="class-name">Tên</div>
-                            <div class="class-">Mã lớp</div>
+                            <div class="class-name"><p>Tên</p></div>
+                            <div class="class-id"><p>Mã lớp:</p></div>
+                            <div class="class-des">
+                                <p>Mô tả lớp học:</p>
+                                <div id="c-add">+ Thêm</div>
+                            </div>
+                            <div class="class-ach">
+                                <p>Danh mục:</p>
+                            </div>
+                                <div class="class-items">
+                                    <div class="es-item">
+                                        <i class="fa-regular fa-address-card"></i>
+                                        <p>Bảng tin</p>
+                                    </div>
+                                    <div class="es-item">
+                                        <i class="fa-regular fa-calendar"></i>
+                                        <p>Lịch học</p>
+                                    </div>
+                                    <div class="es-item">
+                                        <i class="fa-regular fa-user"></i>
+                                        <p>Thành viên</p>
+                                    </div>
+                                    <div class="es-item">
+                                        <i class="fa-regular fa-star"></i>
+                                        <p>Vai trò lớp</p>
+                                    </div>
+                                    <div class="es-item">
+                                        <i class="fa-regular fa-handshake"></i>
+                                        <p>Nhóm học tập</p>
+                                    </div>
+                                    <div class="es-item">
+                                        <i class="fa-regular fa-newspaper"></i>
+                                        <p>Bài tập</p>
+                                    </div>
+                                    <div class="es-item">
+                                        <i class="fa-regular fa-clipboard"></i>
+                                        <p>Bảng điểm</p>
+                                    </div>
+                                    <div class="es-item">
+                                        <i class="fa-regular fa-image"></i>
+                                        <p>Bài giảng</p>
+                                    </div>
+                                    <div class="es-item">
+                                        <i class="fa-regular fa-paper-plane"></i>
+                                        <p>Tài liệu</p>
+                                    </div>
+                                </div>
+
+                                <div id="del-class"></div>
                         </div>
                     </div>
-                    <div id="main-view">
-
+                    <div class="main-view">
+                        
                     </div>
                 </div>
             </div>
-        </div>
+        </div>  
     </div>
+
     
 </body>
 <!-- Script -->
@@ -158,4 +210,5 @@
     <script src="../assets/js/navbar-behavior.js"></script>
     <script src="./assets/js/index.js" type="module"></script>
     <script src="assets/js/navbar-behavior.js"></script>
+    <script src="assets/js/sidebar-behaviour.js"></script>
 </html>

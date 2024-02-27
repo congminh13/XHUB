@@ -16,7 +16,8 @@ export function popupAlert(title, content){
     let popC = document.createElement('p');
     popC.innerHTML= content;
     popUp.style = "color: red; z-index: 20000000; position:fixed; bottom: 25px; right: 10px; background-color: white; height: 150px; width: 300px";
-    popUp.appendChild('')
+    popUp.appendChild(popT);
+    popUp.appendChild(popC);
     document.getElementById('container').appendChild(popUp);
 }
 

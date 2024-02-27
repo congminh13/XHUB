@@ -14,7 +14,7 @@ renderIndex(container);
 import { centerContent } from './overview-render.js';
 const renderCenterContent = () => {
     const centerElements = centerContent();
-};
+};  
 renderCenterContent();
 
 import { renderFRow } from "./class-render.js";
