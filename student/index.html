@@ -153,46 +153,83 @@
       </div>
       <!-- Body -->
       <div id="body-container" class="body-container">
-        <div class="class-section-container">
-          <div class="class-section">
-            <div class="class-section-btn-container">
-              <button class="class-section-btn" id="Your-current-class">
-                <p class="class-section-btn-text">Lớp của bạn</p>
-              </button>
+        <div class="class-std-sort-container">
+        <div class="class-section">
+          <!-- class section -->
+          <div class="class-section-btn">
+            <button id="your-class" class="class-btn btn-active">
+              <p>Lớp của bạn</p>
+            </button>
+            <button class="class-btn">
+              <p>Lớp đang chờ</p>
+            </button>
+            <button class="class-btn">
+              <p>Lớp đã ẩn</p>
+            </button>
+          </div>
+           <!-- Search for class -->
+        <div class="class-search">
+          <div class="search-box">
+            <input class="class-search-box" placeholder="Tìm kiếm..." type="text">
+          </div>  
+
+          <div class="class-sort">
+            <div class="custom-select">
+              <select class="select-box">
+                <option value="">A-Z</option>
+                <option value="">Z-A</option>
+                <option value="">Mới nhất</option>
+                <option value="">Cũ nhất</option>
+              </select>
             </div>
-            <div class="class-section-btn-container">
-              <button class="class-section-btn" id="Your-waiting-class">
-                <p class="class-section-btn-text">Lớp đang chờ</p>
-              </button>
-            </div>
-            <div class="class-section-btn-container">
-              <button class="class-section-btn" id="Your-hidden-class">
-                <p class="class-section-btn-text">Lớp đã ẩn</p>
-              </button>
+            <div class="search-class-btn">
+              <button id="search-class-btn">+ Tìm lớp học</button>
             </div>
           </div>
+        </div>   
         </div>
-<!-- 
-        <div id="uwcontainer">
-          <div id="uwbehave">
-            <div class="classes">
-              <div class="f-row">
-                <input
-                  type="text"
-                  class="search-box hover"
-                  placeholder="Tìm kiếm..."
-                />
-                <select name="Sắp xếp" id="s-role" class="hover">
-                  <option value="1">A-Z</option>
-                  <option value="2">Z-A</option>
-                  <option value="3">Mới nhất</option>
-                  <option value="4">Cũ nhất</option>
-                </select>
-                <div class="create-class hover">+ Tạo lớp học</div>
+        <!-- class details -->
+        <div class="class-detail">
+          <div class="class-detail-left">
+            <p>Tên lớp</p>
+          </div>
+          <div class="class-detail-right">
+            <p>Học sinh</p>
+            <p>Bài giảng</p>
+            <p>Bài tập</p>
+            <p>Tài liệu</p>
+          </div>
+        </div>
+        <!-- display classes -->
+        <div class="class-display-container">
+          <div class="class-info-container">
+            <div class="class-info">
+              <div class="class-thumbnail">
+                <img class="class-info-thumb" src="https://static-cse.canva.com/blob/1373818/1600w-wK95f3XNRaM.jpg" alt="">
+              </div>
+              <div class="class-info-detail">
+                <p class="class-info-title">10C TIN</p>
+                <p>Mã lớp &bull; MKYHA</p>
+              </div>
+            </div>
+            
+            <div class="class-edu-amount">
+              <div class="class-std-amount stats">
+                <p>1</p>
+              </div>
+              <div class="class-lesson-amount stats">
+                <p>0</p>
+              </div>
+              <div class="class-exc-amount stats">
+                <p>0</p>
+              </div>
+              <div class="class-doc-amount stats">
+                <p>1</p>
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
+        </div>
       </div>
     </div>
   </body>
