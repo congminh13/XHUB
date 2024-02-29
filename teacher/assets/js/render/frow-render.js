@@ -1,7 +1,7 @@
 export function renderFRow() {
     // Create classes div
     const classesDiv = document.createElement("div");
-    classesDiv.className = "classes";
+    classesDiv.className = "classes";       
 
     // Create f-row div
     const fRowDiv = document.createElement("div");

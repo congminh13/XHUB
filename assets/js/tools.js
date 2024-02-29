@@ -97,4 +97,3 @@ export function deleteUWBehave() {
 
     uwcontainer.appendChild(newUWBehave);
 }
-
