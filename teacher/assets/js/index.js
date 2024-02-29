@@ -1,6 +1,6 @@
 const checkout = document.getElementById("logout-button");
 
-checkout.addEventListener("click", (event) => {
+checkout.addEventListener("click", () => {
    localStorage.removeItem("GLOBAL_LOG_DATA");
 });
 
@@ -15,7 +15,7 @@ import { renderSidebar } from "./render/sidebar-render.js";
 
 let parret = 1;
 
-if (parret == 1) {
+if (parret == 1) {  
     deleteUWBehave();
     let intern = document.createElement('div');
     intern.setAttribute('id', 'class-detail')
@@ -28,3 +28,4 @@ if (parret == 1) {
     deleteUWBehave();
     renderFRow();
 }
+

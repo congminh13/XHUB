@@ -54,14 +54,6 @@ export function renderSidebar() {
             margin-bottom: 5px;
             align-items: center;
         `;
-        esItemDiv.addEventListener('mouseenter', function() {
-            esItemDiv.style.backgroundColor = 'var(--border-color)';
-            esItemDiv.style.borderRadius = '10px';
-        });
-        esItemDiv.addEventListener('mouseleave', function() {
-            esItemDiv.style.backgroundColor = 'initial';
-            esItemDiv.style.borderRadius = 'initial';
-        });
         classItemsDiv.appendChild(esItemDiv);
     }
 
