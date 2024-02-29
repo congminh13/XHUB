@@ -131,7 +131,6 @@ function registrationEvent(event) {
         logData.registration.name = regInput.name;
         // console.log(logData.registration);
         fetchRegisterApi(logData);
-        document.getElementById('pass-allowed').textContent = 'Đã đăng ký thành công.';
         globalLogData.name = document.getElementById('full-name').value;
         setLocalStorage(globalLogData, "GLOBAL_LOG_DATA");
     }

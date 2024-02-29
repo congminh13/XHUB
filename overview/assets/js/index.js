@@ -1,5 +1,5 @@
 import { API_DOMAIN } from "../../../config/api.js";
-import { getLocalStorage } from "../../../assets/js/tools.js";
+import { getLocalStorage, setLocalStorage } from "../../../assets/js/tools.js";
 
 function checkLogIn() {
     const checkVal = getLocalStorage("GLOBAL_LOG_DATA");
@@ -29,6 +29,13 @@ function fetchDetailApi() {
                     window.location.href = '/teacher';
                 }
             } else {
+                let globalLogData = {
+                    name: "",
+                    role: "",
+                    passed: false,  
+                    token: ""
+                }
+                setLocalStorage(globalLogData, "GLOBAL_LOG_DATA");
                 window.location.href = '/';
             }
             
