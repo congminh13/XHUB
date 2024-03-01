@@ -107,6 +107,13 @@ export function showLogInput(header, placeholder, buttonContent) {
         container.removeChild(box);
     });
 
+    submitButton.addEventListener('click', () => {
+        const inputValue = input.value;
+        localStorage.setItem('DES_INP', inputValue);
+        container.removeChild(overlay);
+        container.removeChild(box);
+    });
+
     headerElement.appendChild(closeButton);
     box.appendChild(headerElement);
     box.appendChild(input);
@@ -114,3 +121,4 @@ export function showLogInput(header, placeholder, buttonContent) {
     container.appendChild(overlay);
     container.appendChild(box);
 }
+    

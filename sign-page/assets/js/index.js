@@ -130,7 +130,7 @@ function registrationEvent(event) {
         logData.registration.role = regInput.role;
         logData.registration.name = regInput.name;
         // console.log(logData.registration);
-        fetchRegisterApi(logData);
+        fetchRegisterApi(logData);  
         globalLogData.name = document.getElementById('full-name').value;
         setLocalStorage(globalLogData, "GLOBAL_LOG_DATA");
     }
