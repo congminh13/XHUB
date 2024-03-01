@@ -200,8 +200,16 @@ body {
 }
 
 .class-info-detail {
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     margin-left: 1rem;
+}
+
+.class-info-title {
+    font-weight: bold;
+}
+
+.class-info-code {
+    font-size: small;
 }
 
 .class-edu-amount {
@@ -216,3 +224,4 @@ body {
     position: relative;
     line-height: 4;
 }
+
