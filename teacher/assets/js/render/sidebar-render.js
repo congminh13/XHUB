@@ -1,4 +1,4 @@
-export function renderSidebar() {
+export function renderSidebar(name, id) {
     const sidebarDiv = document.createElement('div');
     sidebarDiv.classList.add('side-bar');
     sidebarDiv.style.cssText = `
@@ -14,11 +14,11 @@ export function renderSidebar() {
 
     const classNameDiv = document.createElement('div');
     classNameDiv.classList.add('class-name');
-    classNameDiv.innerHTML = `<p>Tên</p>`;
+    classNameDiv.innerHTML = `<p>${name}</p>`;
 
     const classIdDiv = document.createElement('div');
     classIdDiv.classList.add('class-id');
-    classIdDiv.innerHTML = `<p>Mã lớp:</p>`;
+    classIdDiv.innerHTML = `<p>Mã lớp: ${id}</p>`;
 
     const classDesDiv = document.createElement('div');
     classDesDiv.classList.add('class-des');
@@ -68,7 +68,11 @@ export function renderSidebar() {
     fContentDiv.appendChild(classItemsDiv);
     fContentDiv.appendChild(delClassDiv);
 
-
+    document.getElementById('class-detail').style.cssText = `
+        padding-top: 63px;
+        height: 100%;
+        width: 100%;
+    `;
     document.getElementById('class-detail').appendChild(sidebarDiv);
 }
 

@@ -1,9 +1,12 @@
-export function renderSpClass(name, id, stdC, exC) {
+import { setLocalStorage } from "../../../../assets/js/tools.js";
+
+export function renderSpClass(name, id, stdC, exC, index) {
     const classDisplayContainer = document.querySelector('.classes');
 
     // Create elements
     const classInfoContainer = document.createElement('div');
     classInfoContainer.classList.add('class-info-container');
+    classInfoContainer.setAttribute('id', `sp-${index}`);
     classInfoContainer.style.minHeight = '80px';
     classInfoContainer.style.cursor = 'pointer';
     classInfoContainer.style.marginTop = '1rem';
@@ -15,6 +18,12 @@ export function renderSpClass(name, id, stdC, exC) {
 
     classInfoContainer.addEventListener('mouseleave', function() {
         classInfoContainer.style.background = 'transparent';
+    });
+
+    classInfoContainer.addEventListener('click', function() {
+        setLocalStorage(1, "PARRET");
+        setLocalStorage(index, "CURRENT_CLASS");
+        location.reload();
     });
 
     const classInfo = document.createElement('div');

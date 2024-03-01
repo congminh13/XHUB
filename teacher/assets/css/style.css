@@ -90,6 +90,10 @@ body {
   justify-content: center;
 }
 
+.nal-item:hover {
+    cursor: pointer;
+}
+
 /* Right content */
 .right-navbar-section {
   display: flex;
@@ -438,6 +442,13 @@ height: 100%;
     cursor: pointer;
 }
 
+#uwcontainer {
+    height: 100%;
+    width: 100%;
+}
 
-
+.uwbehave {
+    height: 100%;
+    width: 100%;
+}
 /* UW DOWN PART */          
