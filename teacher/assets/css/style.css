@@ -381,8 +381,7 @@ height: 100%;
 
 .classes {
     margin-top: 90px;
-    padding-inline: 30px;
-    height: 100%;
+    height: 1000%;
     width: 100%;
 }
 
@@ -439,21 +438,6 @@ height: 100%;
     cursor: pointer;
 }
 
-#uwcontainer {
-    height: 100%;
-    width: 100%;
-}
 
-#uwbehave {
-    height: 100%;
-    width: 100%;
-}
 
 /* UW DOWN PART */          
-
-#class-detail {
-    padding-top: 63px;
-    width: 100%;
-    height: 100%;
-    display: flex;  
-}

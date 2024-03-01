@@ -92,10 +92,34 @@ export function deleteUWBehave() {
 
     let newUWBehave = document.createElement("div");
     newUWBehave.setAttribute("id", "uwbehave");
+    newUWBehave.classList.add("uwbehave");
 
     let uwcontainer = document.getElementById("uwcontainer");
 
     uwcontainer.appendChild(newUWBehave);
 }
 
-
+export async function getClassNeutral() {
+    const globalLogData = getLocalStorage("GLOBAL_LOG_DATA");
+    if (globalLogData != null && globalLogData.token != "") 
+        try {
+            const response = await fetch(`${API_DOMAIN}/api/v1/class`, {
+                method: "GET",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${globalLogData.token}`
+                }
+            });
+            const data = await response.json();
+            if (data.error_code == 0) {
+                let classData = {
+                    "count": data.data.meta.total,
+                    "data" : data.data.classes
+                }
+                setLocalStorage(classData, "CLASS_DATA");
+            }
+        } catch (err) {
+            console.log(err);
+        }
+    else window.location.href = '/';
+}

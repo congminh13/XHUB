@@ -21,7 +21,7 @@ function fetchDetailApi() {
     })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            console.log(data)   
             if (data.error_code == 0) {
                 if (data.data.role == "student") {
                     window.location.href = '/student';
