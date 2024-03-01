@@ -13,4 +13,4 @@ if (globalLogData.role != "teacher" && globalLogData == null) setLocalStorage(re
     }
 let parret = getLocalStorage("PARRET");
 
-if (parret == null || parret == '' || parret == 1) setLocalStorage(0, "PARRET");
+if (parret == null || parret == '' || parret != 1) setLocalStorage(0, "PARRET");
