@@ -57,7 +57,7 @@ body {
 
 /* class section */
 .class-section {
-    height: 30%;
+    height: 9rem;
     width: 100%;
     padding-top: 1.2rem;
     padding-left: 2rem;
@@ -73,6 +73,7 @@ body {
     font-size: 1rem;
     font-weight: bold;
     color: rgb(64, 61, 61);
+    cursor: pointer;
 }
 
 .btn-active {
@@ -86,6 +87,7 @@ body {
     height: 50px;
     margin-top: 20px;
     display: flex;
+    
 }
 
 .class-search-box {
@@ -169,7 +171,7 @@ body {
 }
 
 .class-display-container {
-    height: calc(100% - 190px);
+    height: calc(100% - 35%);
 }
 
 .class-info-container {
@@ -198,8 +200,16 @@ body {
 }
 
 .class-info-detail {
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     margin-left: 1rem;
+}
+
+.class-info-title {
+    font-weight: bold;
+}
+
+.class-info-code {
+    font-size: small;
 }
 
 .class-edu-amount {
@@ -209,8 +219,9 @@ body {
 }
 
 .stats {
-    width: 22%;
-    left: 1.8rem;
+    width: 8rem;
+    left: 2rem;
     position: relative;
     line-height: 4;
 }
+
