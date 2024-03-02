@@ -13,7 +13,7 @@ export function renderSpClass(name, id, stdC, exC, index) {
     classInfoContainer.style.display = 'flex';
 
     classInfoContainer.addEventListener('mouseenter', function() {
-        classInfoContainer.style.background = 'rgb(239, 239, 239)';
+        classInfoContainer.style.background = 'rgb(239, 239, 209)';
     });
 
     classInfoContainer.addEventListener('mouseleave', function() {
@@ -59,54 +59,36 @@ export function renderSpClass(name, id, stdC, exC, index) {
 
     const classEduAmount = document.createElement('div');
     classEduAmount.classList.add('class-edu-amount');
-    classEduAmount.style.width = '50%';
-    classEduAmount.style.display = 'flex';
-    classEduAmount.style.flex = '1 1';
-    classEduAmount.style.justifyContent = 'center';
+    classEduAmount.style.cssText = 'width: 50%; display: flex; flex: 1 1; justify-content: center;';
 
     const classStdAmount = document.createElement('div');
     classStdAmount.classList.add('class-std-amount', 'stats');
-    classStdAmount.style.width = '209px';
-    classStdAmount.style.position = 'relative';
-    classStdAmount.style.lineHeight = '4';
-    classStdAmount.style.display = 'flex'; 
-    classStdAmount.style.justifyContent = 'center';
+    classStdAmount.style.cssText = 'width: 209px; position: relative; line-height: 4; display: flex; justify-content: center; align-items: center;';
 
     const stdCount = document.createElement('p');
     stdCount.textContent = stdC;
 
     const classLessonAmount = document.createElement('div');
     classLessonAmount.classList.add('class-lesson-amount', 'stats');
-    classLessonAmount.style.width = '209px';
-    classLessonAmount.style.position = 'relative';
-    classLessonAmount.style.lineHeight = '4';
-    classLessonAmount.style.display = 'flex'; 
-    classLessonAmount.style.justifyContent = 'center';
+    classLessonAmount.style.cssText = 'width: 209px; position: relative; line-height: 4; display: flex; justify-content: center; align-items: center;';
 
     const lessonCount = document.createElement('p');
     lessonCount.textContent = '0';
 
     const classExcAmount = document.createElement('div');
     classExcAmount.classList.add('class-exc-amount', 'stats');
-    classExcAmount.style.width = '209px';
-    classExcAmount.style.position = 'relative';
-    classExcAmount.style.lineHeight = '4';
-    classExcAmount.style.display = 'flex'; 
-    classExcAmount.style.justifyContent = 'center';
+    classExcAmount.style.cssText = 'width: 209px; position: relative; line-height: 4; display: flex; justify-content: center; align-items: center;';
 
     const excCount = document.createElement('p');
     excCount.textContent = exC;
 
     const classDocAmount = document.createElement('div');
     classDocAmount.classList.add('class-doc-amount', 'stats');
-    classDocAmount.style.width = '209px';
-    classDocAmount.style.position = 'relative';
-    classDocAmount.style.lineHeight = '4';
-    classDocAmount.style.display = 'flex'; 
-    classDocAmount.style.justifyContent = 'center';
+    classDocAmount.style.cssText = 'width: 209px; position: relative; line-height: 4; display: flex; justify-content: center; align-items: center;';
 
     const docCount = document.createElement('p');
     docCount.textContent = '0';
+
 
     // Append elements
     classInfo.appendChild(classThumbnail);

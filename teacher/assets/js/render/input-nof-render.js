@@ -1,4 +1,4 @@
-export function showLogInput(header, placeholder, buttonContent) {
+export function showLogInput(header, placeholder, buttonContent, location) {
     const container = document.getElementById('container');
     const box = document.createElement('div');
     const overlay = document.createElement('div');
@@ -109,7 +109,7 @@ export function showLogInput(header, placeholder, buttonContent) {
 
     submitButton.addEventListener('click', () => {
         const inputValue = input.value;
-        localStorage.setItem('DES_INP', inputValue);
+        localStorage.setItem(location, inputValue);
         container.removeChild(overlay);
         container.removeChild(box);
     });

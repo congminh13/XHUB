@@ -49,7 +49,7 @@ if (parret == 1) {
     let classData = getLocalStorage("CLASS_DATA");
     renderSidebar(classData.data[index].name, classData.data[index].key);
     document.getElementById('c-add').addEventListener('click', () => {
-    showLogInput('Thêm mô tả cho lớp học', 'Nhập mô tả cho lớp học tại đây', 'Thêm');
+    showLogInput('Thêm mô tả cho lớp học', 'Nhập mô tả cho lớp học tại đây', 'Thêm', 'DES_INP');
     // code add descr iption for class
     });
 } 
