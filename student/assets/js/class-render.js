@@ -82,16 +82,86 @@ export const classSort = () => {
         select_box.appendChild(option);
     });
 
+    const search_class_btn = document.createElement("div")
+    search_class_btn.classList.add("search-class-btn")
+    const search_btn = document.createElement("button")
+    search_btn.id = "search-class-btn"
+    const searchClassText = [
+        {
+            text: {
+                "vi": "+ Tìm lớp học",
+                "eng": "+ Search for classes",
+            },
+        },
+    ]
+    search_btn.innerHTML = searchClassText[0].text[global_lang];
+
+    // class details
+    const class_detail = document.createElement("div")
+    class_detail.classList.add("class-detail")
+    const class_detail_left = document.createElement("div")
+    class_detail_left.classList.add("class-detail-left")
+
+    const classDetails = [
+        {
+            text: {
+                "vi": "Tên lớp",
+                "eng": "Class name",
+            },
+        },
+        {
+            text: {
+                "vi": "Học sinh",
+                "eng": "Students",
+            },
+        },
+        {
+            text: {
+                "vi": "Bài giảng",
+                "eng": "Lessons ",
+            },
+        },
+        {
+            text: {
+                "vi": "Bài tập",
+                "eng": "Exercises",
+            },
+        },
+        {
+            text: {
+                "vi": "Tài liệu",
+                "eng": "Documents",
+            },
+        },
+    ]
+
+    const class_detail_left_text = document.createElement("p")
+    class_detail_left_text.innerHTML = classDetails[0].text[global_lang];
+    const class_detail_right = document.createElement("div")
+    class_detail_right.classList.add("class-detail-right")
+
+    for (let k = 0; k < 4; k++) {
+        const class_detail_right_text = document.createElement("p")
+        class_detail_right.appendChild(class_detail_right_text);
+        class_detail_right_text.innerHTML = classDetails[k].text[global_lang];
+    }
+
     // append child
     bodyContainer.appendChild(classesElements);
     classesElements.appendChild(class_section)
+    classesElements.appendChild(class_detail);
     class_section.appendChild(class_section_btn);
     class_section.appendChild(class_search);
     class_search.appendChild(search_box);
     class_search.appendChild(class_sort);
     search_box.appendChild(class_search_box);
     class_sort.appendChild(custom_select);
+    class_sort.appendChild(search_class_btn);
     custom_select.appendChild(select_box);
+    search_class_btn.appendChild(search_btn);
+    class_detail.appendChild(class_detail_left);
+    class_detail.appendChild(class_detail_right);
+    class_detail_left.appendChild(class_detail_left_text);
     
     return classesElements;
 }
