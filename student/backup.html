@@ -1,116 +1,79 @@
-<!-- Left content -->
-<div class="left-side-menu">
-  <a class="object left-menu-selected" href="#today">
-    <div class="object-div">
-      <div class="aic df">
-        <i class="bx bxs-widget"></i>
-        <p>Phòng học hôm nay</p>
-        <i class="bx bx-check"></i>
-      </div>
+<div id="body-container" class="body-container">
+  <div class="class-std-sort-container">
+     <!-- class section -->
+  <div class="class-section">
+    <div class="class-section-btn">
+      <button id="your-class" class="class-btn btn-active">
+        <p class="class-btn-text">Lớp của bạn</p>
+      </button>
+      <button class="class-btn">
+        <p class="class-btn-text">Lớp đang chờ</p>
+      </button>
+      <button class="class-btn">
+        <p class="class-btn-text">Lớp đã ẩn</p>
+      </button>
     </div>
-  </a>
+     <!-- Search for class -->
+  <div class="class-search">
+    <div class="search-box">
+      <input class="class-search-box" placeholder="Tìm kiếm..." type="text">
+    </div>  
 
-  <a class="object" href="#ex">
-    <div class="object-div">
-      <div class="aic df">
-        <i class="bx bx-note"></i>
-        <p>Bài tập chưa làm</p>
-        <i class="bx bx-check"></i>
+    <div class="class-sort">
+      <div class="custom-select">
+        <select class="select-box">
+          <option value="">A-Z</option>
+          <option value="">Z-A</option>
+          <option value="">Mới nhất</option>
+          <option value="">Cũ nhất</option>
+        </select>
+      </div>
+      <div class="search-class-btn">
+        <button id="search-class-btn">+ Tìm lớp học</button>
       </div>
     </div>
-  </a>
-
-  <a class="object" href="#doc">
-    <div class="object-div">
-      <div class="aic df">
-        <i class="bx bx-folder-minus"></i>
-        <p>Tài liệu chưa đọc</p>
-        <i class="bx bx-check"></i>
-      </div>
+  </div>   
+  </div>
+  <!-- class details -->
+  <div class="class-detail">
+    <div class="class-detail-left">
+      <p>Tên lớp</p>
     </div>
-  </a>
-
-  <a class="object" href="#video">
-    <div class="object-div">
-      <div class="aic df">
-        <i class="bx bx-play-circle"></i>
-        <p>Bài giảng chưa xem</p>
-        <i class="bx bx-check"></i>
-      </div>
-    </div>
-  </a>
-
-  <a class="object" href="#achievement">
-    <div class="object-div">
-      <div class="aic">
-        <i class="bx bx-trophy"></i>
-        <p>Thành tích</p>
-        <i class="bx bx-check hidden"></i>
-      </div>
-    </div>
-  </a>
-</div>
-<!-- Center content -->
-<div class="center-content" id="center-content">
-  <div class="today-class classroom" id="today">
-    <h6 class="today-class-title title">Phòng học hôm nay</h6>
-    <div class="today-class-render render">
-      <img
-        class="today-class-img img"
-        src="https://shub.edu.vn/images/overview-schedule.svg"
-        alt=""
-      />
-      <p class="sub">Không có buổi học nào diễn ra hôm nay</p>
+    <div class="class-detail-right">
+      <p>Học sinh</p>
+      <p>Bài giảng</p>
+      <p>Bài tập</p>
+      <p>Tài liệu</p>
     </div>
   </div>
-
-  <div class="exercise classroom" id="ex">
-    <h6 class="exercise-title title">Bài tập chưa nộp</h6>
-    <div class="exercise-render render">
-      <img
-        class="exercise-img img"
-        src="https://shub.edu.vn/images/overview-homework.svg"
-        alt=""
-      />
-      <p class="sub">Thật tuyệt vời! Tất cả bài tập đã được hoàn thành</p>
+  <!-- display classes -->
+  <div class="class-display-container">
+    <div class="class-info-container">
+      <div class="class-info">
+        <div class="class-thumbnail">
+          <img class="class-info-thumb" src="https://static-cse.canva.com/blob/1373818/1600w-wK95f3XNRaM.jpg" alt="">
+        </div>
+        <div class="class-info-detail">
+          <p class="class-info-title">10C TIN</p>
+          <p class="class-info-code">Mã lớp &bull; MKYHA</p>
+        </div>
+      </div>
+      
+      <div class="class-edu-amount">
+        <div class="class-std-amount stats">
+          <p>1</p>
+        </div>
+        <div class="class-lesson-amount stats">
+          <p>0</p>
+        </div>
+        <div class="class-exc-amount stats">
+          <p>0</p>
+        </div>
+        <div class="class-doc-amount stats">
+          <p>1</p>
+        </div>
+      </div>
     </div>
   </div>
-
-  <div class="document classroom" id="doc">
-    <h6 class="document-title title">Tài liệu chưa đọc</h6>
-    <div class="document-render render">
-      <img
-        class="document-img img"
-        src="https://shub.edu.vn/images/overview-file.svg"
-        alt=""
-      />
-      <p class="sub">Bạn đã đọc hết tất cả tài liệu</p>
-    </div>
-  </div>
-
-  <div class="subject-video classroom" id="video">
-    <h6 class="subject-video-title title">Bài giảng chưa xem</h6>
-    <div class="subject-video-render render">
-      <img
-        class="subject-video-img img"
-        src="https://shub.edu.vn/images/overview-lesson.svg"
-        alt=""
-      />
-      <p class="sub">Bạn đã xem hết tất cả bài giảng</p>
-    </div>
-  </div>
-
-  <div class="achievment classroom" id="achievment">
-    <h6 class="achievment-title title">Thành tích học tập</h6>
-    <div class="achievment-render render">
-      <img
-        class="achievment-img img"
-        src="https://shub.edu.vn/images/overview-achievement.svg"
-        alt=""
-      />
-      <p class="sub">Bạn chưa có kết quả nào để hiển thị</p>
-    </div>
   </div>
 </div>
-<!-- Right content (none) -->
-<div class="right-content"></div>

@@ -46,13 +46,15 @@ body {
 .body-container {
     height: 100%;
     width: 100%;
-    background: white
+    background: #ffffff;
 }
 
 .class-std-sort-container {
     margin-top: 60px;
     height: calc(100vh - 60px);
+    /* position: absolute; */
     width: 100%;
+    background: #ffffff;
 }
 
 /* class section */
@@ -75,6 +77,7 @@ body {
     color: rgb(64, 61, 61);
     cursor: pointer;
 }
+
 
 .btn-active {
     background: rgb(22, 69, 158);
@@ -222,6 +225,6 @@ body {
     width: 8rem;
     left: 2rem;
     position: relative;
-    line-height: 4;
+    line-height: 4.5;
 }
 
