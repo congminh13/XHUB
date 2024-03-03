@@ -1,4 +1,6 @@
 import { global_lang } from "../../../config/lang.js";
+import { setLocalStorage } from "../../../../assets/js/tools.js";
+
 const classBtnText = [
     {
         text: {
@@ -143,13 +145,50 @@ export const classSort = () => {
     for (let k = 0; k < 4; k++) {
         const class_detail_right_text = document.createElement("p")
         class_detail_right.appendChild(class_detail_right_text);
-        class_detail_right_text.innerHTML = classDetails[k].text[global_lang];
+        class_detail_right_text.innerHTML = classDetails[k+1].text[global_lang];
     }
+
+    // display classes
+    const class_display_container = document.createElement("div")
+    class_display_container.classList.add("class-display-container")
+    const class_info_container = document.createElement("div")
+    class_info_container.classList.add("class-info-container")
+    const class_info = document.createElement("div")
+    class_info.classList.add("class-info")
+    const class_thumbnail = document.createElement("div")
+
+
+
+
+
+
+
+    // create classes card
+    class_thumbnail.classList.add("class-thumbnail")
+    const class_info_thumb = document.createElement("img")
+    class_info_thumb.classList.add("class-info-thumb")
+    // display class_info_thumbnail (not done yet)
+    const class_info_detail = document.createElement("div")
+    class_info_detail.classList.add("class-info-detail")
+    // display class_info_title (not done yet)
+    // display class_info_code (not done yet)
+    const class_edu_amount = document.createElement("div")
+    class_edu_amount.classList.add("class-edu-amount")
+
+
+// Create classes - not done yet
+
+
+
+
+
+
 
     // append child
     bodyContainer.appendChild(classesElements);
     classesElements.appendChild(class_section)
     classesElements.appendChild(class_detail);
+    classesElements.appendChild(class_display_container);
     class_section.appendChild(class_section_btn);
     class_section.appendChild(class_search);
     class_search.appendChild(search_box);
@@ -162,6 +201,12 @@ export const classSort = () => {
     class_detail.appendChild(class_detail_left);
     class_detail.appendChild(class_detail_right);
     class_detail_left.appendChild(class_detail_left_text);
+    class_display_container.appendChild(class_info_container);
+    class_info_container.appendChild(class_info);
+    class_info.appendChild(class_thumbnail);
+    class_thumbnail.appendChild(class_info_thumb);
     
     return classesElements;
 }
+
+

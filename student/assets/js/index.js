@@ -28,3 +28,10 @@ const classContent = () => {
     const classesElements = classSort();
 }
 classContent();
+
+// Create classes 
+// import { renderClasses } from './class-render.js';
+// const createClasses = () => {
+//     const createClassesFunc = renderClasses();
+// }
+// renderClasses();
