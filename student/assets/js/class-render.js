@@ -35,7 +35,7 @@ const searchBoxPlaceholder = [
 ]
 
 
-export const classSort = () => {
+export const classSort = (name, id, stdC, exC, index) => {
     // render class section
     let classesElements = document.createElement("div")
     classesElements.classList.add("class-std-sort-container")
@@ -156,22 +156,32 @@ export const classSort = () => {
     const class_info = document.createElement("div")
     class_info.classList.add("class-info")
     const class_thumbnail = document.createElement("div")
+    class_thumbnail.classList.add("class-thumbnail")
 
-
-
-
-
-
+    // parret check - reload page
+    class_info_container.addEventListener('click', function() {
+        setLocalStorage(1, "PARRET");
+        setLocalStorage(index, "CURRENT_CLASS");
+        location.reload();
+    });
 
     // create classes card
-    class_thumbnail.classList.add("class-thumbnail")
+    
     const class_info_thumb = document.createElement("img")
     class_info_thumb.classList.add("class-info-thumb")
-    // display class_info_thumbnail (not done yet)
+    const no_image_url = 'https://shub-storage.sgp1.cdn.digitaloceanspaces.com/profile_images/33-01.jpg'
+    class_info_thumb.src = no_image_url
+
     const class_info_detail = document.createElement("div")
     class_info_detail.classList.add("class-info-detail")
-    // display class_info_title (not done yet)
-    // display class_info_code (not done yet)
+    const class_info_title = document.createElement("p")
+    class_info_title.classList.add("class-info-title")
+    class_info_title.textContent = name;
+    const class_info_code = document.createElement("p")
+    class_info_code.classList.add("class-info-code")
+    class_info_code.innerHTML = `Mã lớp &bull; ${id}`
+    
+
     const class_edu_amount = document.createElement("div")
     class_edu_amount.classList.add("class-edu-amount")
 
@@ -179,13 +189,34 @@ export const classSort = () => {
 // Create classes - not done yet
 
 
+    // class-edu-amount
+    const classStdAmount = document.createElement('div');
+    classStdAmount.classList.add('class-std-amount', 'stats');
+    const stdCount = document.createElement('p');
+    stdCount.textContent = stdC;
+    
+    const classLessonAmount = document.createElement('div');
+    classLessonAmount.classList.add('class-lesson-amount', 'stats');
+    const lessonCount = document.createElement('p');
+    lessonCount.textContent = '0';
+
+    const classExcAmount = document.createElement('div');
+    classExcAmount.classList.add('class-exc-amount', 'stats');
+    const excCount = document.createElement('p');
+    excCount.textContent = exC;
+
+    const classDocAmount = document.createElement('div');
+    classDocAmount.classList.add('class-doc-amount', 'stats');
+    const docCount = document.createElement('p');
+    docCount.innerHTML = '0';
+    
 
 
 
-
-
-    // append child
+    // append to display container
     bodyContainer.appendChild(classesElements);
+
+    // append elements 
     classesElements.appendChild(class_section)
     classesElements.appendChild(class_detail);
     classesElements.appendChild(class_display_container);
@@ -203,8 +234,19 @@ export const classSort = () => {
     class_detail_left.appendChild(class_detail_left_text);
     class_display_container.appendChild(class_info_container);
     class_info_container.appendChild(class_info);
+    class_info_container.appendChild(class_edu_amount);
     class_info.appendChild(class_thumbnail);
     class_thumbnail.appendChild(class_info_thumb);
+    class_info.appendChild(class_info_detail);
+    class_info_detail.appendChild(class_info_title);
+    class_info_detail.appendChild(class_info_code);
+    class_edu_amount.appendChild(classStdAmount);
+    class_edu_amount.appendChild(classLessonAmount);
+    class_edu_amount.appendChild(classExcAmount);
+    class_edu_amount.appendChild(classDocAmount);
+    classLessonAmount.appendChild(lessonCount);
+    classExcAmount.appendChild(excCount);
+    classDocAmount.appendChild(docCount);
     
     return classesElements;
 }

@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css?family=Mulish");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: 'Mulish';
+}
+
+/* Color Variable */
+:root {
+  --main-color:
+  --hover-color: 
+  --body-color:
+  --container-color:
+  --text-color:
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #2b853668;
+}
+
+h6 {
+    margin: 0px;
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.join-class-des {
+    margin: 0px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.container {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: wrap;
+    width: 100%;
+    top: 25%;
+    position: relative;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 12%;
+}
+
+.logo-container {
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container img {
+    height: 15rem;
+}
+
+.join-class-card {
+    padding: 40px 120px;
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
+
+}
+
+#join-class-btn {
+    color: #FFFFFF;
+    height: 56px;
+    padding: 16px;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    width: 100%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+#join-class-btn:hover {
+    background-color: #155e9e;
+}
+
+#back-class-render {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 8px;
+    padding-left: 25%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#back-class-render:hover {
+    background: #e0dddd6c;
+    border-radius: 8px;
+}
+
+#back-class-render p {
+    color: black;
+    font-size: 1.1rem;
+}
+
+.bx {
+    font-size: 2rem;
+    color: black;
+}
+
+.otp-container {
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem 0 2.5rem 0;
+  }
+  
+  .otp-input {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    margin: 0 5px;
+    border: none;
+    border-bottom: 1px solid #000000;
+    outline: none;
+    background: transparent;
+  }
+  
+  .otp-input:focus {
+    border-color: rgb(0, 0, 0);
+  }

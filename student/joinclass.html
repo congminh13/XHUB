@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Name</title>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./assets/css/joinclass.css">
+    <!-- Link Box-icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Link JS -->
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="/assets/img/logo.jpg" alt="" />
+        </div>
+        <div class="join-class">
+            <div class="join-class-card">
+                <h6>Tham gia lớp bằng mã lớp</h6>
+                <p class="join-class-des">Mã lớp gồm 5 ký tự, được giáo viên lớp đó cung cấp</p>
+                <div class="otp-container">
+                    <input type="text" maxlength="1" id="digit1" class="otp-input" autofocus>
+                    <input type="text" maxlength="1" id="digit2" class="otp-input">
+                    <input type="text" maxlength="1" id="digit3" class="otp-input">
+                    <input type="text" maxlength="1" id="digit4" class="otp-input">
+                    <input type="text" maxlength="1" id="digit5" class="otp-input">
+                  </div>
+                <button id="join-class-btn">Tìm lớp</button>
+                <button id="back-class-render">
+                    <i class='bx bx-right-arrow-alt bx-flip-horizontal' ></i>
+                    <p>Quay lại danh sách lớp</p>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
