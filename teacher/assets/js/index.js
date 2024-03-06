@@ -17,6 +17,8 @@ import { renderClassInfoDisplay } from "./render/class-display.js";
 import { getLocalStorage, setLocalStorage } from "../../../assets/js/tools.js";
 
 let parret = getLocalStorage("PARRET");
+let csD = getLocalStorage("CLASS_DATA");
+if (csD.count == 0) setLocalStorage(0, "PARRET");
 
 /* 
     PARRET FILL PATH    

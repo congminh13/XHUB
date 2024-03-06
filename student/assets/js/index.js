@@ -16,11 +16,11 @@
 // };  
 // renderCenterContent();
 
-// const checkout = document.getElementById("logout-button");
+const checkout = document.getElementById("logout-button");
 
-// checkout.addEventListener("click", (event) => {
-//    localStorage.removeItem("GLOBAL_LOG_DATA");
-// });
+checkout.addEventListener("click", (event) => {
+   localStorage.removeItem("GLOBAL_LOG_DATA");
+});
 
 // Class content render
 import { classSort } from './class-render.js';
