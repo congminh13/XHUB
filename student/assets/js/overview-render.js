@@ -46,7 +46,7 @@ const leftSideData = [
         widget_icon: "bx-trophy",
     },
 ];
-export const renderOverview = () => {
+const renderLeftside = () => {
     let leftSide = document.createElement("div");
     leftSide.setAttribute("id", "left-side");
     leftSide.classList.add("left-side-menu");
@@ -145,7 +145,7 @@ const centerContentData = [
     },
 ]
 
-export const centerContent = () => {
+let centerContent = () => {
     const centerIDs = ['today', 'ex', 'doc', 'video', 'achievement'];
 
     let centerElements = document.createElement("div");
@@ -171,7 +171,7 @@ export const centerContent = () => {
         sub.classList.add("sub");
         render.appendChild(sub);
 
-        const bodyContainer = document.getElementById("body-container");
+        const bodyContainer = document.getElementById("                                 ");
         const classroom = document.createElement("div");
         
         classroom.classList.add("classroom");
@@ -182,4 +182,16 @@ export const centerContent = () => {
         bodyContainer.appendChild(centerElements);
     }   
     return centerElements;
+}
+
+export function renderOverview() {
+    let uwbehave = document.getElementById('uwbehave');
+    let container = document.createElement('div');
+    container.appendChild(centerContent);
+    container.style.cssText = `
+        height: 100%;
+        width: 100%;
+        display: flex;
+    `;
+    uwbehave.appendChild(container);
 }

@@ -1,167 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>XHub Classroom</title>
-    <!-- Link CSS -->
-    <link rel="stylesheet" href="./assets/css/./overview.css" />
-    <link rel="stylesheet" href="./assets/css/class.css" />
-    <link rel="stylesheet" href="./assets/css/root.css" />
-    <!-- Link Box-icon -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <!-- Link JS -->
-    <!-- Fav icon -->
-    <link
-      rel="shortcut icon"
-      href="../assets/img/logo.jpg"
-      type="image/x-icon"
-    />
-  </head>
 
-  <body>
-    <div id="container" class="container">
-      <!-- Header -->
-      <div class="header">
-        <a class="page-logo" href="..">
-          <img src="../assets/img/logo.jpg" alt="" />
-        </a>
-        <!-- Center -->
-        <div class="center-navbar-section">
-          <a class="nal-item cc heavy selected" href="#">Tổng quan</a>
-          <a class="nal-item cc" href="#">Lớp học</a>
-          <a class="nal-item cc" href="#">Lịch học</a>
-          <div class="border-slider"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindX Hub</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/img/logo.jpg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div id="container" class="container">
+    <!-- Header -->
+    <div class="header">
+      <a class="page-logo" href="..">
+        <img src="../assets/img/logo.jpg" alt="" />
+      </a>
+      <!-- Center -->
+      <div class="center-navbar-section">
+        <a class="nal-item cc" id="pr1-class">Tổng quan</a>
+        <a class="nal-item cc heavy selected" id="pr0-class">Lớp học</a>
+        <a class="nal-item cc" href="#">Lịch học</a>
+        <div class="border-slider"></div>
+      </div>
+      <!-- Right -->
+      <div class="right-navbar-section">
+        <div class="help-question">
+          <button class="ask-question">Hỏi đáp</button>
+          <p>Hỏi đáp cùng<br />XHub Community</p>
         </div>
-        <!-- Right -->
-        <div class="right-navbar-section">
-          <div class="help-question">
-            <button class="ask-question">Hỏi đáp</button>
-            <p>Hỏi đáp cùng<br />XHub Community</p>
+        <div class="personal-info">
+          <div class="notification" id="noti">
+            <button class="notification-box">
+              <i class="bx bxs-bell"></i>
+            </button>
           </div>
-          <div class="personal-info">
-            <div class="notification" id="noti">
-              <button class="notification-box">
-                <i class="bx bxs-bell"></i>
-              </button>
-            </div>
-            <div class="noti-dialog noti-hidden" id="notiBox">
-              <p class="noti-box-text">Thông báo</p>
-            </div>
-            <div class="profile" id="profile">
-              <!-- <img class="user-avt"
+          <div class="noti-dialog noti-hidden" id="notiBox">
+            <p class="noti-box-text">Thông báo</p>
+          </div>
+          <div class="profile" id="profile">
+            <!-- <img class="user-avt"
               src="https://scontent.fsgn5-11.fna.fbcdn.net/v/t39.30808-6/316135401_642626037598315_1028004947353332384_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeHqkrPZiiTrzdv1LMTbY9xdR50DEuRm3klHnQMS5GbeSbpB8S9OIK05YeEPuktPRvfasnyT3_vboQS9v07rzyPV&_nc_ohc=1RsWzDCfxZkAX9T5ye4&_nc_ht=scontent.fsgn5-11.fna&oh=00_AfDtOdJhzs0U-u08f_oVxbb5qu5sI8iSdL31gwhp-wyftQ&oe=65A1C7CD"
               alt="" /> -->
-              <img
-                class="protection"
-                src="https://cdn3.iconfinder.com/data/icons/security-flat-style/128/Security_-_Flat_Style-3-30-512.png"
-                alt=""
-              />
-              <p class="user-name">Minh</p>
-              <i class="bx bxs-down-arrow dropdown"></i>
-            </div>
+            <img class="protection"
+              src="https://cdn3.iconfinder.com/data/icons/security-flat-style/128/Security_-_Flat_Style-3-30-512.png"
+              alt="" />     
+            <p class="user-name">Minh</p>
+            <i class="bx bxs-down-arrow dropdown"></i>
           </div>
         </div>
       </div>
-      <div class="profile-box profile-box-hidden" id="profileBox">
-        <ul class="profile-menu">
-          <a href="">
-            <span>
-              <li>
-                <div class="profile-img">
-                  <img
-                    src="https://cdn1.iconfinder.com/data/icons/infinity-security/48/011_005_shield_protection_bad_threat-512.png"
-                    alt=""
-                  />
-                </div>
-                <div class="profile-title-box">
-                  <p class="profile-title">Độ bảo mật tài khoản</p>
-                  <p class="profile-sub">Kém</p>
-                </div>
-              </li>
-            </span>
-
-            <span>
-              <li>
-                <div class="profile-img">
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/2048px-2023_Facebook_icon.svg.png"
-                    alt=""
-                  />
-                </div>
-                <div class="profile-title-box">
-                  <p class="profile-title">Tạo liên kết Facebook</p>
-                  <p class="profile-sub1">Đăng nhập thuận tiện hơn</p>
-                </div>
-              </li>
-            </span>
-
-            <span>
-              <li>
-                <div class="profile-img">
-                  <img
-                    src="https://file.removal.ai/preview/622b43f3-8144-4ff0-aebc-7699834035ed-logoso-1573209877-8401-1573209934-1200x020191109084206-4832100.png"
-                    alt=""
-                  />
-                </div>
-                <div class="profile-title-box">
-                  <p class="profile-title">
-                    Tạo liên kết tài khoản sở giáo dục
-                  </p>
-                  <p class="profile-sub1">Đăng nhập tài khoản sở GDĐT - HCM</p>
-                </div>
-              </li>
-            </span>
-
-            <span>
-              <li>
-                <div class="profile-img">
-                  <i class="bx bxs-message-square-detail profile-icon"></i>
-                </div>
-                <div class="profile-title-box">
-                  <p class="profile-title">Đóng góp ý kiến / Báo lỗi</p>
-                </div>
-              </li>
-            </span>
-
-            <span>
-              <li>
-                <div class="profile-img">
-                  <i class="bx bxs-user profile-icon"></i>
-                </div>
-                <div class="profile-title-box">
-                  <p class="profile-title">Thông tin cá nhân</p>
-                </div>
-              </li>
-            </span>
-
-            <span>
-              <li id="logout-button">
-                <div class="profile-img">
-                  <i class="bx bx-log-in profile-icon"></i>
-                </div>
-                <div class="profile-title-box">
-                  <p class="profile-title">Đăng xuất</p>
-                </div>
-              </li>
-            </span>
-          </a>
-        </ul>
-      </div>
-      <!-- Body -->
-      <div id="body-container" class="body-container">
- 
-      </div>
     </div>
-  </body>
-  <!-- Script -->
-  <script src="./assets/js/reclaim.js" type="module"></script>
+    <div class="profile-box profile-box-hidden" id="profileBox">
+      <ul class="profile-menu">
+        <a href="">
+          <span>
+            <li>
+              <div class="profile-img">
+                <img
+                  src="https://cdn1.iconfinder.com/data/icons/infinity-security/48/011_005_shield_protection_bad_threat-512.png"
+                  alt="" />
+              </div>
+              <div class="profile-title-box">
+                <p class="profile-title">Độ bảo mật tài khoản</p>
+                <p class="profile-sub">Kém</p>
+              </div>
+            </li>
+          </span>
+
+          <span>
+            <li>
+              <div class="profile-img">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/2048px-2023_Facebook_icon.svg.png"
+                  alt="" />
+              </div>
+              <div class="profile-title-box">
+                <p class="profile-title">Tạo liên kết Facebook</p>
+                <p class="profile-sub1">Đăng nhập thuận tiện hơn</p>
+              </div>
+            </li>
+          </span>
+
+          <span>
+            <li>
+              <div class="profile-img">
+                <img
+                  src="https://file.removal.ai/preview/622b43f3-8144-4ff0-aebc-7699834035ed-logoso-1573209877-8401-1573209934-1200x020191109084206-4832100.png"
+                  alt="" />
+              </div>
+              <div class="profile-title-box">
+                <p class="profile-title">
+                  Tạo liên kết tài khoản sở giáo dục
+                </p>
+                <p class="profile-sub1">Đăng nhập tài khoản sở GDĐT - HCM</p>
+              </div>
+            </li>
+          </span>
+
+          <span>
+            <li>
+              <div class="profile-img">
+                <i class="bx bxs-message-square-detail profile-icon"></i>
+              </div>
+              <div class="profile-title-box">
+                <p class="profile-title">Đóng góp ý kiến / Báo lỗi</p>
+              </div>
+            </li>
+          </span>
+
+          <span>
+            <li>
+              <div class="profile-img">
+                <i class="bx bxs-user profile-icon"></i>
+              </div>
+              <div class="profile-title-box">
+                <p class="profile-title">Thông tin cá nhân</p>
+              </div>
+            </li>
+          </span>
+
+          <span>
+            <li id="logout-button">
+              <div class="profile-img">
+                <i class="bx bx-log-in profile-icon"></i>
+              </div>
+              <div class="profile-title-box" >
+                <p class="profile-title">Đăng xuất</p>
+              </div>        
+            </li>
+          </span>
+        </a>
+      </ul>
+    </div>
+    <!-- Class search page -->
+    <div id="uwcontainer">
+        <div id="uwbehave">
+            
+        </div>
+    </div>  
+</div>
+
+    
+</body>
+<!-- Script -->
   <script src="../assets/js/auth.js" type="module"></script>
-  <script src="./assets/js/navbar-behavior.js"></script>
   <script src="../assets/js/navbar-behavior.js"></script>
+  <script src="../assets/js/sidebar-behavior.js"></script>
   <script src="./assets/js/index.js" type="module"></script>
-  <!-- <script src="./assets/js/class-render.js"></script> -->
+  <script src="../assets/js/navbar-behavior.js"></script>
+  <script src="./assets/js/reclaim.js" type="module"></script>
 </html>
