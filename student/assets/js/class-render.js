@@ -1,6 +1,18 @@
 import { global_lang } from "../../../config/lang.js";
 import { setLocalStorage } from "../../../../assets/js/tools.js";
 
+// join class by code
+const search_class_btns = document.getElementsByClassName("search-class-btn");
+
+document.addEventListener("DOMContentLoaded", function () {
+    for (let i = 0; i < search_class_btns.length; i++) {
+        search_class_btns[i].addEventListener("click", function () {
+            window.location.href = 'joinclass.html'; 
+        });
+    }
+});
+
+// Class render
 const classBtnText = [
     {
         text: {
