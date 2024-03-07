@@ -21,7 +21,7 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="container" id="container">
       <div class="logo-container">
         <img src="/assets/img/logo.jpg" alt="" />
       </div>
@@ -46,13 +46,16 @@
           </div>
           <button id="join-class-btn">Tìm lớp</button>
           <button id="back-class-render">
-            <i class="bx bx-right-arrow-alt bx-flip-horizontal"></i>
-            <p>Quay lại danh sách lớp</p>
+            <div class="ctn">
+                <i class="bx bx-right-arrow-alt bx-flip-horizontal"></i>
+                <p>Quay lại danh sách lớp</p>
+            </div>
           </button>
         </div>
       </div>
     </div>
   </body>
   <!-- Link JS -->
-  <script src="./assets/js/join-class.js"></script>
+  <script src="./assets/js/join-class.js" type="module"></script>
+  <script src="../assets/js/auth.js" type="module"></script>
 </html>

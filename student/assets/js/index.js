@@ -44,12 +44,10 @@ if (parret == 0) {
 if (parret == 1) {
     deleteUWBehave();
     document.getElementById('uwbehave').classList.add('uwbehave');
-    
-
     let index = getLocalStorage("CURRENT_CLASS");
     let classData = getLocalStorage("CLASS_DATA");
     if (classData.data != '')
-    renderOverview(classData.data[index].name, classData.data[index].key);
+    renderOverview();
 } 
 
 const prClass0 = document.getElementById('pr0-class');

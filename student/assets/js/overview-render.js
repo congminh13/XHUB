@@ -171,7 +171,6 @@ let centerContent = () => {
         sub.classList.add("sub");
         render.appendChild(sub);
 
-        const bodyContainer = document.getElementById("                                 ");
         const classroom = document.createElement("div");
         
         classroom.classList.add("classroom");
@@ -179,7 +178,6 @@ let centerContent = () => {
         classroom.appendChild(title);
         classroom.appendChild(render);
         centerElements.appendChild(classroom);
-        bodyContainer.appendChild(centerElements);
     }   
     return centerElements;
 }
@@ -187,11 +185,11 @@ let centerContent = () => {
 export function renderOverview() {
     let uwbehave = document.getElementById('uwbehave');
     let container = document.createElement('div');
-    container.appendChild(centerContent);
     container.style.cssText = `
-        height: 100%;
-        width: 100%;
-        display: flex;
+    height: 100%;
+    width: 100%;
+    display: flex;
     `;
+    container.appendChild(centerContent());
     uwbehave.appendChild(container);
 }

@@ -1,4 +1,3 @@
-import { popupAlert } from "../../../assets/js/tools.js";
 import { getLocalStorage } from "../../../assets/js/tools.js";
 import { API_DOMAIN } from "../../../config/api.js";
 
@@ -18,7 +17,6 @@ export async function createClass(name) {
     })
         .then(res => res.json())
         .then(data => {
-            popupAlert("", "OK r");
             console.log(data);
         })
         .catch(err => {

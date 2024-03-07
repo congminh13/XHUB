@@ -40,9 +40,10 @@ export function renderFRow() {
     });
 
     // Create create-class div
-    const createClassDiv = document.createElement("div");
+    const createClassDiv = document.createElement("a");
+    createClassDiv.setAttribute("href", './joinclass.html');
     createClassDiv.className = "create-class hover";
-    createClassDiv.textContent = "+ Tạo lớp học";
+    createClassDiv.textContent = "+ Tìm lớp học";
     createClassDiv.style.cssText = `
         margin-right:30px;
         display:flex;
@@ -55,6 +56,7 @@ export function renderFRow() {
         color:white;
         border-radius:10px;
         height:50px;
+        text-decoration: none;
         transition: all 0.3s ease;
     `;
 
